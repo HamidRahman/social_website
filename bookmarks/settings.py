@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     #My Apps
-    'account', # or -> account.apps.AccountConfig. 
+    'account.apps.AccountConfig', #'account', # or -> . 
     # The above placement ensure to override django-contrib.admin templates and use over own Auth templates
     
     #Django Defaul Apps
@@ -105,6 +105,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+LOGIN_REDIRECT_URL = 'dashboard'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
 
 
 # Internationalization
