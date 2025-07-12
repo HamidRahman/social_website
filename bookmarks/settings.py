@@ -65,6 +65,8 @@ INSTALLED_APPS = [
     #3rd Party Apps
     'social_django', # This may be the defaul application ???
     'django_extensions',
+    'easy_thumbnails',
+    
     #My Apps
     'images.apps.ImagesConfig',
 ]
