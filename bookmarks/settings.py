@@ -69,6 +69,7 @@ INSTALLED_APPS = [
     
     #My Apps
     'images.apps.ImagesConfig',
+    'actions.apps.ActionsConfig',
 ]
 
 MIDDLEWARE = [
