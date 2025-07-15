@@ -13,6 +13,8 @@ pyopenssl = "==24.1.0"
 django-decouple = "*"
 requests = "==2.31.0"
 easy-thumbnails = "*"
+django-debug-toolbar = "*"
+redis = "==5.0.4"
 
 [dev-packages]
 

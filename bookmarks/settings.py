@@ -66,6 +66,7 @@ INSTALLED_APPS = [
     'social_django', # This may be the defaul application ???
     'django_extensions',
     'easy_thumbnails',
+    'debug_toolbar',
     
     #My Apps
     'images.apps.ImagesConfig',
@@ -73,6 +74,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -172,3 +174,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ABSOLUTE_URL_OVERRIDES = {
     'auth.user': lambda u: reverse_lazy('user_details', args=[u.username])
 }
+
+INTERNAL_IPS = [
+'127.0.0.1',
+]
+
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 0
