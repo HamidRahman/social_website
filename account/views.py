@@ -40,7 +40,8 @@ def register(request):
             )
             # Save the User object
             new_user.save()
-            Profile.objects.create(user=new_user)
+            # Since Signal has been created for this therefore commented below statement
+            # Profile.objects.create(user=new_user)
             return render(request,'account/register_done.html',{'new_user': new_user})
         else:
             return render(request, 'account/register.html', {'user_form': user_form})
